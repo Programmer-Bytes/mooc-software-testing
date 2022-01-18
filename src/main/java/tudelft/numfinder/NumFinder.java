@@ -1,25 +1,42 @@
 package tudelft.numfinder;
 
 public class NumFinder {
-    private int smallest = Integer.MAX_VALUE;
-    private int largest = Integer.MIN_VALUE;
+
+    // a smart way to initilize the values such that any first number of array shall
+    // update the smallest and largest.
+    private int smallest;;
+    private int largest;
+    ;
+
 
     public void find(int[] nums) {
-        for(int n : nums) {
-
-            if(n < smallest)
+        smallest = Integer.MAX_VALUE;
+        largest = Integer.MIN_VALUE;
+        for (int n : nums) {
+            if (n < smallest) {
                 smallest = n;
-            else if (n > largest)
+            }
+            if (n > largest) {
                 largest = n;
-
+            }
         }
     }
 
-    public int getSmallest () {
+    /* getters and setters */
+    public int getSmallest() {
         return smallest;
     }
 
-    public int getLargest () {
+    public void setSmallest(int smallest) {
+        this.smallest = smallest;
+    }
+
+    public int getLargest() {
         return largest;
     }
+
+    public void setLargest(int largest) {
+        this.largest = largest;
+    }
+
 }
