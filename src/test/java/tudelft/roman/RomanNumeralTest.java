@@ -16,6 +16,7 @@ public class RomanNumeralTest {
         Assertions.assertEquals(1, result);
     }
 
+    // testing second test scenario, where there are multiple digits in roman numeral.
     @Test
     public void numberWithManyDigits() {
         RomanNumeral roman = new RomanNumeral();
@@ -27,6 +28,7 @@ public class RomanNumeralTest {
     public void numberWithSubtractiveNotation() {
         RomanNumeral roman = new RomanNumeral();
         int result = roman.convert("IV");
+        // assertEquals parameters take an order of "expected" followed by "actual".
         Assertions.assertEquals(4, result);
     }
 
