@@ -6,4 +6,3 @@ TU Delft's edX MOOC on Software Testing.
 ## License
 
 This repository is licensed under CC BY-NC-SA.
-remove this line later. This is only for experimental purpose
