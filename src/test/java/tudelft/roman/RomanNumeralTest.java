@@ -15,12 +15,13 @@ public class RomanNumeralTest {
 
     @Test // a test must be annotated with this annotation
     public void singleNumber() {
+        int expected = 1;
         // Step 1. instantiate the test class (Unit under test).
 //        RomanNumeral roman = new RomanNumeral();
         // Step 2. invoke the message we want to test.
-        int result = roman.convert("I"); // "I" is the test input.
-        // Step 3. use assertions to check for equality.
-        Assertions.assertEquals(1, result);
+        int actual = roman.convert("I"); // "I" is the test input.
+        // Step 3. use assertions to check for equality
+        Assertions.assertEquals(expected, actual);
     }
 
     // testing second test scenario, where there are multiple digits in roman numeral.
