@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 public class LeapYearTest {
 
 	private LeapYear ly;
+	private int candidateYear;
 
 	@BeforeEach
 	public void setup() {
@@ -15,25 +16,50 @@ public class LeapYearTest {
 
 	@Test
 	public void leapYearsThatAreNonCenturialYears() {
-		boolean result = ly.isLeapYear(2016);
-		Assertions.assertTrue(result);
+		// Test preparation
+		candidateYear = 2016;
+
+		// Test actual execution
+		boolean actual = ly.isLeapYear(candidateYear);
+
+		// Verification
+		Assertions.assertTrue(actual);
 	}
 
 	@Test
 	public void leapCenturialYears() {
-		LeapYear ly = new LeapYear();
-		Assertions.assertTrue(ly.isLeapYear(2000));
+		// Test preparation
+		candidateYear = 2000;
+
+		// Test actual execution
+		boolean actual = ly.isLeapYear(candidateYear);
+
+		// Verification
+		Assertions.assertTrue(actual);
 	}
 
 	@Test
 	public void nonLeapCenturialYears() {
-		LeapYear ly = new LeapYear();
-		Assertions.assertFalse(ly.isLeapYear(1500));
+		// Test preparation
+		candidateYear = 1500;
+
+		// Test actual execution
+		boolean actual = ly.isLeapYear(candidateYear);
+
+		// Verification
+		Assertions.assertFalse(actual);
 	}
 
 	@Test
 	public void nonLeapYears() {
-		LeapYear ly = new LeapYear();
-		Assertions.assertFalse(ly.isLeapYear(2017));
+		// Test preparation
+		candidateYear = 2017;
+
+		// Test actual execution
+		boolean actual = ly.isLeapYear(candidateYear);
+
+		// Verification
+		Assertions.assertFalse(actual);
 	}
+
 }
